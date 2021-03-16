@@ -4,6 +4,53 @@
 <head>
 	<meta charset="utf-8">
 	<title>Search Engine Selector</title>
+	<style>
+		html {
+			background-color: #131516;
+			color: #fff;
+			font-size: large;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		div {
+			text-align: center;
+			margin: 350px 350px 0 350px;
+		}
+
+		#search {
+			width: 70%;
+			padding: 12px 150px 12px 20px;
+			margin: 8px 0 15px 0;
+			font-size: 26px;
+		}
+
+		label {
+			padding: 0px 50px;
+			font-size: 26px;
+			text-align: center;
+		}
+
+		button {
+			padding: 20px 20px 16px 20px;
+			margin-left: 10px;
+			width: 150px;
+			background-color: #0054b4;
+			border: 0;
+			color: #fff;
+			font-size: 20px;
+			border-radius: 7px;
+		}
+
+		button:hover {
+			cursor: pointer;
+			background-color: #00489b;
+		}
+
+		button:active {
+			cursor: pointer;
+			background-color: #003c81;
+		}
+	</style>
 	<script>
 		function setSearchEngine(event) {
 			let actions = {
@@ -40,13 +87,14 @@
 <body>
 
 	<div id="searchEngineSelector">
+		<h1>Search Engine Selector</h1>
 		<form id="searchForm" action="">
-			<input type="text" name="q" />
+			<input type="text" name="q" id="search" placeholder="Enter search text..." />
+			<button type="submit" value="Go!">Go!</button>
 			<label><input type="radio" name="engine" value="google" /> Google</label>
 			<label><input type="radio" name="engine" value="duckDuckGo" /> DuckDuckGo</label>
 			<label><input type="radio" name="engine" value="bing" /> Bing</label>
 			<label><input type="radio" name="engine" value="ask" /> Ask</label>
-			<button type="submit" value="Go!">Go!</button>
 		</form>
 	</div>
 
